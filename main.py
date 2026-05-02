@@ -14,7 +14,7 @@ def get_valid_input(prompt, min_num=0, max_num=100):
             print("Oops! Enter number from " + str(min_num) + " to " + str(max_num) + " only")
         except ValueError:
             print("Invalid input! Numbers only please~")
-
+            
 def compute_subject_grade(formative, alternative, summative):
     # Calculate grade: 25% Formative, 30% Alternative, 45% Summative
     return (formative * 0.25) + (alternative * 0.30) + (summative * 0.45)

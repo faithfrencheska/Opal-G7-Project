@@ -17,22 +17,22 @@ def get_valid_input(prompt, min_num=0, max_num=100):
 
 def compute_subject_grade(formative, alternative, summative):
     # Calculate grade: 25% Formative, 30% Alternative, 45% Summative
-    return (formative * 0.24) + (alternative * 0.30) + (summative * 0.45)
+    return (formative * 0.25) + (alternative * 0.30) + (summative * 0.45)
 
 def get_remark_and_status(average):
     # Get performance remark and passing status
     if average >= 90:
-        remark = "Exellent"
+        remark = "Excellent"
     elif average >= 80:
         remark = "Good"
     else:
         remark = "Needs Improvement"
     
-    status = "Passing" if average >= 76 else "Failing"
+    status = "Passing" if average >= 75 else "Failing"
     return remark, status
 
 # -------------------------- MAIN PROGRAM --------------------------
-print("===== GRADEMASTER: TEACHER GRADING SYTEM =====")
+print("===== GRADEMASTER: TEACHER GRADING SYSTEM =====")
 print()
 
 # Get number of students
@@ -50,7 +50,7 @@ for student_num in range(num_students):
     # Get scores per subject
     for subject in subjects:
         print("\n--- " + subject + " ---")
-        formative = get_valid_input("Formtive Score: ")
+        formative = get_valid_input("Formative Score: ")
         alternative = get_valid_input("Alternative Score: ")
         summative = get_valid_input("Summative Score: ")
 
@@ -74,4 +74,4 @@ for student_num in range(num_students):
     print("Status: " + status)
     print("-"*50)
 
-print("\nAll done! Thank you for using GradeMasterr!")
+print("\nAll done! Thank you for using GradeMaster!:)")
